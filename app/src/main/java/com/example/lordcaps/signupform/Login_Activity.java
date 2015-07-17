@@ -40,7 +40,10 @@ public class Login_Activity extends Activity {
 
                 if(password.equals(confirmation)) {
                     User newUser = new User(username,password);
+
+
                     Intent i = new Intent(Login_Activity.this , HomeActivity.class);
+                    i.putExtra(HomeActivity.EXTRA,"Hello Android Course");
                     startActivity(i);
                 }
             }

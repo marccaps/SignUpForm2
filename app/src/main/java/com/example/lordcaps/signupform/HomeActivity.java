@@ -1,17 +1,25 @@
 package com.example.lordcaps.signupform;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends Activity {
+
+    private static final String TAG = "HomeActivity";
+    public static final String EXTRA = "INFO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        String info = getIntent().getStringExtra(EXTRA);
+        Log.d(TAG , info);
     }
 
     @Override
